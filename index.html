@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./styles/output.css">    
+    <title>Dev Confeitaria  do Rio de Janeiro!</title>
+</head>
+<body>
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center"> <!--header-->
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/pao-logo.png" alt="logo dev burguer" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Dev Confeitaria </h1>
+            <span class="text-white font-medium">Rua dev 10,Centro-Rio de Janeiro-Rj</span>
+
+            <div class="bg-green-500 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+            </div>
+        </div>
+
+    </header> <!--fim-do-header-->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça nosso menu</h2>
+
+    <!--inicio Menu-->
+    <div id="menu">
+
+        <main  class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/bisnaga.png" 
+                alt="Pão Bisnaga" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Pão Bisnaga</p>
+                    <p class="text-sm">Com a casca externa das bisnaguinhas costuma ser dourada e levemente crocanteO interior das bisnagas é fofo, com uma textura aerada.</p> 
+                    <p>Elas são ótimas para absorver manteiga, geleia ou outros recheios.</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$5.00 <small>/un</small></p></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Pão Bisnaga "
+                        data-price="5.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+            </div><!-- fim produto item-->
+
+          
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/PAO DE GOIABADA.png" 
+                alt="PAO DE GOIABADA" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Pão doce de Goiabada</p>
+                    <p class="text-sm">O pão doce é macio e fofinho combinando o frescor do limão e o aroma da canela com a goiabada proporcionando em cada mordida uma explosão de sabores</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$7.00<small>/un</small></p></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Pão de Goiabada"
+                        data-price="7.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div><!-- fim produto item-->
+
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/pào frances.png" 
+                alt="Pão frances" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Pão frances</p>
+                    <p class="text-sm">O pão francês é um clássico da panificação, apreciado por sua casca crocante e miolo macio.</p> 
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$1.00 <small>/un</small></p></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Pão frances"
+                        data-price="1.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+
+
+            </div><!-- fim produto item-->
+
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/broa de milho.png" 
+                alt="Broa  de milho" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Broa de milho</p>
+                    <p class="text-sm">A broa de milho é um pão caseiro tradicional, feito com farinha de milho e trigo.
+                    Ela é típica de Portugal, Galiza e Brasil. Experimente essa deliciosa iguaria! </p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$4.00 <small>/un</small></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Broa de milho"
+                        data-price="4.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div><!-- fim produto item-->
+
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/4 queijos.png" 
+                alt="Pão recheado" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Pão recheado</p>
+                    <p class="text-sm"> Pão feito com  Queijo com Gorgonzola, parmesão, catupiry, mussarela, cebola, tomate, azeitona, salsinha e orégano</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$12.00 <small>/un</small></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Pão recheado"
+                        data-price="12.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div><!-- fim produto item-->
+
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/chescake de goiaba.png" 
+                alt="Chescacke de Goiabada" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Chescacke de Goiabada</p>
+                    <p class="text-sm">Uma sobremesa deliciosa e refrescante. O delicioso chescacke de goiabada irá te surpreender.</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$12.00 <small>/un</small></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Chescacke de Goiabada"
+                        data-price="12.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div><!-- fim produto item-->
+
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/pao de queijo.png" 
+                alt="Pão de queijo" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Pão de queijo</p>
+                    <p class="text-sm"> Feito com polvilho azedo e queijo parmesão fresco, esse pãozinho é uma verdadeira paixão .</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$4.00 <small>/un</small></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Pão de queijo"
+                        data-price="4.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div><!-- fim produto item-->
+
+            <div class="flex gap-2"><!--produto item-->
+                <img src="./assets/chescacke de limão.png" 
+                alt="Torta de limão" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Torta de limão</p>
+                    <p class="text-sm"> 
+                        Uma sobremesa deliciosa e refrescante que combina a acidez cítrica do limão com uma base crocante.O equilíbrio perfeito entre doçura e acidez.</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p>R$12.00 <small>/fatia</small></p>
+
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="torta-de-limão"
+                        data-price="12.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div><!-- fim produto item-->
+            
+        </main>
+        
+        <div class="mx-auto max-w-7xl px-2 my-1">
+            <h2 class="font-bold text-3xl">
+                Bebidas
+            </h2>
+        </div> 
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        <!--gride bebidas-->
+           
+            <div class="flex gap-2 w-full"><!--bebida item-->
+
+
+                <img src="./assets/refri-1.png" 
+                alt="coca-lata" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div class="w-full">
+
+                    <p class="font-bold">coca-lata</p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$6.00 <small>/lata</small></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="coca-lata"
+                        data-price="6.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                </div>    
+            </div><!--fim bebida item-->
+
+            <div class="flex gap-2 w-full"><!--bebida item-->
+
+
+                <img src="./assets/refri-2.png" 
+                alt="coca-lata" 
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div class="w-full">
+
+                    <p class="font-bold">guarana-lata</p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$6.00 <small>/lata</small></p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="guarana-lata"
+                        data-price="6.00">
+                        
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                        </button>
+                    </div>
+                </div>    
+            </div><!--fim bebida item-->
+
+        </div><!--fim gride bebidas-->
+
+    </div><!--fim menu-->
+
+    <!--modal cart-->
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="cart-modal">
+
+
+        <div class="bg-white p-5  rounded-md min-w-[90%]  md:min-w-[600px]">
+            
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho </h2>
+            <div id ="cart-items" class="flex  justify-between flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input type="text"
+            placeholder="Digite seu endereço completo"
+            id="address"
+            class="w-full border-2 p-1 rounded my-1"/>
+
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+            <div class="flex itens-center justify-between mt-4 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+
+
+            
+
+        </div>
+
+    </div>
+    <!-- fim modal cart-->
+
+
+    <!--buttom cart footer-->
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" 
+        id="cart-btn"
+        >
+
+            <span id="cart-count">0</span>
+            veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!-- fim buttom cart footer-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+        
+</body>
+        
+       
+</html>
